@@ -1,0 +1,455 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+                background-size: cover;
+                background-position: center top;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        function switchLanguage() {
+            window.location.href = "C:/Users/空山茶火/Documents/Graduate/website/index-en.html";
+        }
+    </script>
+</head>
+
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="p-4 bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-sm font-bold text-orange-500">
+                Mike Yuxi Liu Mechanical Engineering Portfolio
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-4 text-sm">
+                <a class="hover:text-orange-500" href="#home">
+                    主页
+                </a>
+                <a class="hover:text-orange-500" href="#about">
+                    关于我
+                </a>
+                <a class="hover:text-orange-500" href="#projects">
+                    项目
+                </a>
+                <a class="hover:text-orange-500" href="#experience">
+                    经历
+                </a>
+                <a class="hover:text-orange-500" href="#skills">
+                    技能
+                </a>
+                <a class="hover:text-orange-500" href="#contact">
+                    联系
+                </a>
+            </div>
+            <!-- Language Switch and Mobile Menu Buttons -->
+            <div class="flex items-center gap-2">
+                <button id="lang-btn" onclick="switchLanguage()"
+                    class="bg-orange-500 text-white px-3 py-1 rounded-md hover:bg-orange-600 transition duration-300 font-bold">
+                    中文
+                </button>
+                <button class="md:hidden text-gray-500 hover:text-orange-500" onclick="toggleMenu()">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div class="hidden md:hidden mt-2 py-2 bg-white border-t border-gray-200" id="mobile-menu">
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#home">
+                主页
+            </a>
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#about">
+                关于我
+            </a>
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#projects">
+                项目
+            </a>
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#experience">
+                经历
+            </a>
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#skills">
+                技能
+            </a>
+            <a class="block py-2 px-4 text-sm hover:bg-orange-100 hover:text-orange-500" href="#contact">
+                联系
+            </a>
+        </div>
+    </nav>
+    <!-- Home Section -->
+    <section id="home" class="min-h-screen flex flex-col">
+        <!-- Orange strip -->
+        <div class="bg-orange-500 h-[35vh] flex items-center justify-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white text-center px-4">欢迎来到我的机械工程作品集</h1>
+        </div>
+        <!-- Light grey area -->
+        <div class="bg-gray-200 h-[65vh] flex items-center justify-center px-4 md:px-20">
+            <!-- Desktop Version -->
+            <div class="hidden md:flex items-center justify-between w-full max-w-6xl">
+                <div class="max-w-xl">
+                    <p class="text-xl text-gray-700 mb-6 leading-relaxed">了解我的机器人工程之旅，从开创性的研究到创新的工业应用。探索我如何塑造机器人科学的未来。
+                    </p>
+                    <div class="flex space-x-4">
+                        <button
+                            class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition duration-300">Download
+                            CV</button>
+                        <button
+                            class="border border-orange-500 text-orange-500 px-6 py-2 rounded-md hover:bg-orange-100 transition duration-300">View
+                            Projects</button>
+                    </div>
+                </div>
+                <div class="ml-8">
+                    <img alt="Professional headshot of a materials engineer in a lab coat, examining a sample"
+                        class="rounded-full border-4 border-orange-500 shadow-lg" height="200"
+                        src="C:/Users/空山茶火/Documents/Graduate/Forms/headshot3.jpg" width="200" />
+                </div>
+            </div>
+            <!-- Mobile Version -->
+            <div class="md:hidden flex flex-col items-center w-full max-w-md">
+                <img alt="Professional headshot of a materials engineer in a lab coat, examining a sample"
+                    class="rounded-full border-4 border-orange-500 shadow-lg mb-6" height="200"
+                    src="C:/Users/空山茶火/Documents/Graduate/Forms/headshot3.jpg" width="200" />
+                <p class="text-gray-700 mb-6 text-center">了解我的机器人工程之旅，从开创性的研究到创新的工业应用。探索我如何塑造机器人科学的未来。</p>
+                <div class="flex flex-col space-y-4 w-full">
+                    <button
+                        class="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition duration-300 w-full">Download
+                        CV</button>
+                    <button
+                        class="border border-orange-500 text-orange-500 px-6 py-2 rounded-md hover:bg-orange-100 transition duration-300 w-full">View
+                        项目</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="md:min-h-screen md:flex md:items-center md:justify-center md:px-20 md:pt-20 parallax" id="about"
+        style="background-image: url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
+        <!-- Desktop Version -->
+        <div class="hidden md:flex container mx-auto px-4 md:px-20 justify-end">
+            <div class="bg-white bg-opacity-90 p-8 rounded-lg max-w-xl">
+                <h2 class="text-3xl font-bold mb-4 text-orange-500">
+                    关于我
+                </h2>
+                <p class="text-gray-700 mb-6">
+                    我是⼀名机械⼯程师，热衷于在机器人领域推动创新并解决复杂问题。我的研究与开发经验使我对机械设计原理和先进工程技术如何应用于现实世界的挑战有了全面的理解。通过在机器人系统设计和仿真方面的工作，我培养了在复杂环境中优化性能和效率的独特视角。
+                </p>
+                <h3 class="text-xl font-bold mb-2 text-orange-500">
+                    教育经历
+                </h3>
+                <ul class="list-disc list-inside mb-4 text-gray-700">
+
+                    <li>
+                        机械工程硕士，哥伦比亚大学，2024
+                    </li>
+                    <li>
+                        机械工程学士，加州大学圣巴巴拉分校，2021
+                    </li>
+                </ul>
+                <h3 class="text-xl font-bold mb-2 text-orange-500">
+                    爱好
+                </h3>
+                <p class="text-gray-700 mb-4">
+                    业余生活中，我热爱写作、绘画、独立游戏制作、机器人模型制作与收藏
+                </p>
+            </div>
+        </div>
+        <!-- Mobile Version -->
+        <div class="md:hidden flex flex-col items-center w-full">
+            <div class="w-full h-64 overflow-hidden">
+                <img alt="Close-up of a scientist examining a material sample under a microscope in a laboratory"
+                    class="w-full h-full object-cover"
+                    src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80">
+                </img>
+            </div>
+            <div class="p-4 bg-white w-full">
+                <h2 class="text-xl font-bold text-orange-500 mb-2">
+                    关于我
+                </h2>
+                <p class="text-sm text-gray-700 mb-2">
+                    我是⼀名机械⼯程师，热衷于在机器人领域推动创新并解决复杂问题。我的研究与开发经验使我对机械设计原理和先进工程技术如何应用于现实世界的挑战有了全面的理解。通过在机器人系统设计和仿真方面的工作，我培养了在复杂环境中优化性能和效率的独特视角。
+                </p>
+                <h3 class="text-lg font-bold mb-1 text-orange-500">
+                    教育经历
+                </h3>
+                <ul class="list-disc list-inside mb-2 text-sm text-gray-700">
+                    <li>
+                        机械工程硕士，哥伦比亚大学，2024
+                    </li>
+                    <li>
+                        机械工程学士，加州大学圣巴巴拉分校，2021
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- The rest of the sections remain unchanged -->
+    <!-- Projects Section -->
+    <section class="md:min-h-screen md:flex md:items-center md:justify-center md:px-20 md:pt-20 parallax" id="projects"
+        style="background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
+        <!-- Desktop Version -->
+        <div class="hidden md:flex container mx-auto px-4 md:px-20 justify-start">
+            <div class="bg-white bg-opacity-90 p-8 rounded-lg max-w-xl">
+                <h2 class="text-3xl font-bold mb-4 text-orange-500">
+                    My Projects
+                </h2>
+                <div class="space-y-4">
+                    <div class="border border-orange-300 rounded-lg p-4">
+                        <h3 class="text-xl font-bold mb-2 text-orange-500">
+                            Advanced Composite Materials
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Developed a new composite material with enhanced strength-to-weight ratio for aerospace
+                            applications.
+                        </p>
+                        <a class="text-orange-500 hover:underline" href="#">
+                            Learn more
+                        </a>
+                    </div>
+                    <div class="border border-orange-300 rounded-lg p-4">
+                        <h3 class="text-xl font-bold mb-2 text-orange-500">
+                            Nanomaterial Characterization
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Implemented advanced microscopy techniques to analyze the structure of novel nanomaterials.
+                        </p>
+                        <a class="text-orange-500 hover:underline" href="#">
+                            Learn more
+                        </a>
+                    </div>
+                    <div class="border border-orange-300 rounded-lg p-4">
+                        <h3 class="text-xl font-bold mb-2 text-orange-500">
+                            Sustainable Materials Design
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            Led a team in developing biodegradable polymers for packaging applications.
+                        </p>
+                        <a class="text-orange-500 hover:underline" href="#">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Version -->
+        <div class="md:hidden flex flex-col items-center w-full">
+            <div class="w-full h-64 overflow-hidden">
+                <img alt="Close-up of advanced composite materials" class="w-full h-full object-cover"
+                    src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80">
+                </img>
+            </div>
+            <div class="p-4 bg-white w-full">
+                <h2 class="text-xl font-bold text-orange-500 mb-2">
+                    My Projects
+                </h2>
+                <div class="space-y-2">
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">
+                            Advanced Composite Materials
+                        </h3>
+                        <p class="text-xs text-gray-600 mb-1">
+                            New composite for aerospace applications.
+                        </p>
+                        <a class="text-xs text-orange-500 hover:underline" href="#">
+                            Learn more
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">
+                            Nanomaterial Characterization
+                        </h3>
+                        <p class="text-xs text-gray-600 mb-1">
+                            Advanced microscopy for novel nanomaterials.
+                        </p>
+                        <a class="text-xs text-orange-500 hover:underline" href="#">
+                            Learn more
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work Experience Section -->
+    <section class="md:min-h-screen md:flex md:items-center md:justify-center md:px-20 md:pt-20 parallax"
+        id="experience"
+        style="background-image: url('https://images.unsplash.com/photo-1581092335397-9583eb92d232?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80');">
+        <!-- Desktop Version -->
+        <div class="hidden md:flex container mx-auto px-4 md:px-20 justify-end">
+            <div class="bg-white bg-opacity-90 p-8 rounded-lg max-w-xl">
+                <h2 class="text-3xl font-bold mb-4 text-orange-500">
+                    My Work Experience
+                </h2>
+                <div class="space-y-4">
+                    <div class="border border-orange-300 rounded-lg p-4">
+                        <h3 class="text-xl font-bold mb-2 text-orange-500">
+                            Senior Materials Engineer
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            XYZ Aerospace, 2018 - Present
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>
+                                Lead research on advanced composite materials for aircraft structures
+                            </li>
+                            <li>
+                                Collaborate with cross-functional teams to optimize material properties
+                            </li>
+                            <li>
+                                Publish research findings in peer-reviewed journals
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="border border-orange-300 rounded-lg p-4">
+                        <h3 class="text-xl font-bold mb-2 text-orange-500">
+                            Materials Scientist
+                        </h3>
+                        <p class="text-gray-700 mb-2">
+                            ABC Research Lab, 2015 - 2018
+                        </p>
+                        <ul class="list-disc list-inside text-gray-700">
+                            <li>
+                                Conducted experiments on novel nanomaterials
+                            </li>
+                            <li>
+                                Developed new characterization techniques for material analysis
+                            </li>
+                            <li>
+                                Mentored junior researchers and interns
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Version -->
+        <div class="md:hidden flex flex-col items-center w-full">
+            <div class="w-full h-64 overflow-hidden">
+                <img alt="Professional working in a materials science laboratory" class="w-full h-full object-cover"
+                    src="https://images.unsplash.com/photo-1581092335397-9583eb92d232?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1920&amp;q=80" />
+            </div>
+            <div class="p-4 bg-white w-full">
+                <h2 class="text-xl font-bold text-orange-500 mb-2">
+                    My Work Experience
+                </h2>
+                <div class="space-y-2">
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">
+                            Senior Materials Engineer
+                        </h3>
+                        <p class="text-xs text-gray-600 mb-1">
+                            XYZ Aerospace, 2018 - Present
+                        </p>
+                        <ul class="list-disc list-inside text-xs text-gray-700">
+                            <li>
+                                Lead research on advanced composites
+                            </li>
+                            <li>
+                                Optimize material properties
+                            </li>
+                            <li>
+                                Publish research findings
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold mb-1 text-gray-800">
+                            Materials Scientist
+                        </h3>
+                        <p class="text-xs text-gray-600 mb-1">
+                            ABC Research Lab, 2015 - 2018
+                        </p>
+                        <ul class="list-disc list-inside text-xs text-gray-700">
+                            <li>
+                                Conducted nanomaterials experiments
+                            </li>
+                            <li>
+                                Developed new analysis techniques
+                            </li>
+                            <li>
+                                Mentored junior researchers
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="bg-orange-500 p-8 text-center text-white" id="contact">
+        <h2 class="text-xl md:text-2xl font-bold mb-4">
+            Contact Me
+        </h2>
+        <p class="mb-4">
+            Feel free to reach out to me for collaborations or inquiries.
+        </p>
+        <a class="bg-white text-orange-500 px-6 py-2 rounded-md hover:bg-orange-100 transition duration-300"
+            href="mailto:email@email.com">
+            Email Me
+        </a>
+        <div class="mt-8">
+            <p class="mb-2">
+                Connect with me on social media:
+            </p>
+            <div class="flex justify-center gap-4">
+                <a class="text-white hover:text-orange-200" href="#">
+                    <i class="fab fa-linkedin fa-2x">
+                    </i>
+                </a>
+                <a class="text-white hover:text-orange-200" href="#">
+                    <i class="fab fa-github fa-2x">
+                    </i>
+                </a>
+                <a class="text-white hover:text-orange-200" href="#">
+                    <i class="fab fa-twitter fa-2x">
+                    </i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-white p-8 text-center text-gray-700 border-t-2 border-orange-500">
+        <div class="flex justify-center gap-4 mb-4">
+            <a class="text-orange-500 hover:text-orange-600" href="#">
+                <i class="fab fa-linkedin">
+                </i>
+            </a>
+            <a class="text-orange-500 hover:text-orange-600" href="#">
+                <i class="fab fa-github">
+                </i>
+            </a>
+            <a class="text-orange-500 hover:text-orange-600" href="#">
+                <i class="fas fa-envelope">
+                </i>
+            </a>
+        </div>
+        <p class="text-sm">
+            © 2024 T.J. Materials Portfolio. All rights reserved.
+        </p>
+    </footer>
+</body>
+
+</html>
